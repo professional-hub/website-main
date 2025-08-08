@@ -823,6 +823,67 @@ nav li:hover .dropdown-menu {
 
 
 
+.pop-plan {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border-top: 5px solid #0052cc;
+  max-width: 320px; /* Further reduced width */
+  margin: 6% auto; /* center horizontally, no side margin */
+  overflow-y: none;
+}
+.pop-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0052cc;
+  margin-bottom: 10px;
+}
+.pop-plan ul {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.pop-plan ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+.pop-plan ul li::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+.pop-btn {
+  background: #0052cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+}
+.pop-note {
+  background: #e6f0ff;
+  border-left: 5px solid #0052cc;
+  padding: 15px;
+  margin: 30px auto;
+  max-width: 800px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .pop-price {
+    font-size: 20px;
+  }
+}
+
+
+
+
 /* === MOBILE VIEW: Horizontal scroll row for course cards === */
 @media (max-width: 1447px) {
   html,body{
