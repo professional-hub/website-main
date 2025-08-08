@@ -792,6 +792,71 @@
   }
 
 
+
+  
+.pop-plan {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border-top: 5px solid #0052cc;
+  max-width: 290px; /* Further reduced width */
+  margin: 10% auto; /* center horizontally, no side margin */
+  overflow-y: none;
+}
+.pop-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0052cc;
+  margin-bottom: 10px;
+}
+.pop-plan ul {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.pop-plan ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+.pop-plan ul li::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+.pop-btn {
+  background: #0052cc;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+}
+.pop-note {
+  background: #e6f0ff;
+  border-left: 5px solid #0052cc;
+  padding: 15px;
+  margin: 30px auto;
+  max-width: 800px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .pop-price {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
 /* verify popup */
 .modal-overlay {
   display: none;
@@ -804,9 +869,9 @@
 
 .modal-box {
   position: relative;
-  width: 90%;
-  max-width: 650px; /* increased width */
-  margin: 12% auto;
+  width: 100%;
+  max-width: 480px; /* or your desired width */
+  margin: 15% auto; /* center horizontally, no side margin */
 }
 
 .modal-content h2 {
@@ -849,11 +914,6 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-
-
-
-
 
 
 
