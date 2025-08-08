@@ -139,7 +139,7 @@ function toggleCourses() {
                 <li><a href="about.html">About us</a></li>
                 <li><a href="team.html">Management Team</a></li>
                 <li><a href="https://qualitynetworkindia.quora.com/">Blog</a></li>
-                <li><a href="https://verify.qualitycareer.in/">Verify Your Certificate</a></li>
+                <li><a href="#" id="verifyLink">Verify Your Certificates</a></li>
             </ul>
             <div class="social-media">
                 <h3>Our Social Media Pages</h3>
@@ -161,6 +161,63 @@ function toggleCourses() {
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.5576565863803!2d80.35359127568398!3d15.82726148481763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a450034308cd5%3A0x6833a282790a1860!2sJanjanam%20complex!5e0!3m2!1sen!2sin!4v1753715002315!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
         </div>
     </footer>
+
+
+<!-- Popup Modal -->
+<div class="modal-overlay" id="verifyModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="verifyTitle">
+    <button class="modal-close" id="closeVerify" aria-label="Close">&times;</button>
+
+    <div class="modal-content">
+      <h2 id="verifyTitle">Certificate Verification</h2>
+
+      <!-- links container (keeps heading separate) -->
+      <div class="modal-links">
+        <a href="https://verify.qualitycareer.in/" target="_blank" rel="noopener">Verify Your Internship Certificate</a>
+      </div>
+      <div class="modal-links">
+        <a href="https://instantexamcertificateverification.qualitycareer.in" target="_blank" rel="noopener">Verify Your Instant Exam Certificate</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// elements
+const verifyLink = document.getElementById('verifyLink');
+const verifyModal = document.getElementById('verifyModal');
+const closeVerify = document.getElementById('closeVerify');
+
+// open modal
+verifyLink.addEventListener('click', function (e) {
+  e.preventDefault();
+  verifyModal.classList.add('open');
+  verifyModal.setAttribute('aria-hidden', 'false');
+});
+
+// close via close button
+closeVerify.addEventListener('click', function () {
+  verifyModal.classList.remove('open');
+  verifyModal.setAttribute('aria-hidden', 'true');
+});
+
+// close when clicking outside modal-box (click on overlay)
+verifyModal.addEventListener('click', function (e) {
+  if (e.target === verifyModal) {
+    verifyModal.classList.remove('open');
+    verifyModal.setAttribute('aria-hidden', 'true');
+  }
+});
+
+// close on Escape key
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && verifyModal.classList.contains('open')) {
+    verifyModal.classList.remove('open');
+    verifyModal.setAttribute('aria-hidden', 'true');
+  }
+});
+</script>
 </body>
 
 </html>
