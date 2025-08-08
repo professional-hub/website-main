@@ -412,6 +412,96 @@ nav li:hover .dropdown-menu {
 
 
 
+/* verify popup */
+.modal-overlay {
+  display: none;                /* will switch to flex when opened */
+  position: fixed;
+  inset: 0;                     /* shorthand for top:0; right:0; bottom:0; left:0; */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100000;              /* above header (header has 999) */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* add the "open" class to show the modal */
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: auto;
+  max-width: 680px;             /* wider so both links can sit in one row on desktops */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 220ms ease;
+}
+
+/* close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+}
+.modal-close:hover { color: #111; }
+
+/* content */
+.modal-content h2 {
+  font-size: 22px;
+  margin: 6px 0 18px;
+  color: #333;
+  text-align: center;
+}
+
+/* keep heading stacked, but links side-by-side */
+.modal-links {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;              /* allow wrap on small screens */
+}
+
+/* link styling */
+.modal-links a {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #0073e6;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  margin: 10px;
+}
+.modal-links a:hover { background: #005bb5; }
+
+/* small screens: stack links vertically and narrow the modal */
+@media (max-width: 480px) {
+  .modal-box { max-width: 92%; padding: 14px; }
+  .modal-links { flex-direction: column; gap: 10px; }
+  .modal-links a { width: 100%; text-align: center; }
+}
+
+/* simple fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
 @media screen and (max-width: 768px) {
  
  nav {
