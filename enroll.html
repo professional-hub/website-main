@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enrollment Plans – Quality Digital Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("open");
+    }
+
+    function toggleCourses() {
+        const dropdown = document.querySelector(".mobile-dropdown");
+        dropdown.classList.toggle("open");
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #222;
+      padding: 20px;
+      margin-top: 80px;
+    }
+
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: white;
+  padding: 7px 40px;
+  border-bottom: 2px solid #ccc;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  font-family: 'Times New Roman';
+}
+
+.logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50%;
+}
+
+.logo img {
+  width: auto;
+  height: 50px;
+}
+
+nav {
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  padding: 2px 8px;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+  border-radius: 10px;
+  display: block;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e0e0e0;
+}
+
+
+.dropdown-menu li a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Show dropdown on hover */
+nav li:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 16px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pop-plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .pop-plan {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      border-top: 5px solid #0052cc;
+    }
+    .pop-plan:hover {
+      transform: translateY(-5px);
+    }
+    .pop-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0052cc;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .pop-btn {
+      background: #0052cc;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 600;
+    }
+    .note {
+      background: #e6f0ff;
+      border-left: 5px solid #0052cc;
+      padding: 15px;
+      margin: 30px auto;
+      max-width: 800px;
+      font-size: 15px;
+      border-radius: 8px;
+    }
+    @media (max-width: 500px) {
+      .price {
+        font-size: 20px;
+      }
+      .note {
+        font-size: 10px;
+      }
+    
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    .menu-icon {
+        display: none;
+    }
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+  padding: 10px 20px;
+  position: relative;
+  background: white;
+  z-index: 999;
+}
+nav{
+  display: none;
+}
+.menu-icon {
+      display: block;
+      font-size: 26px;
+      color: #333;
+      cursor: pointer;
+    
+    }
+  
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 9999;
+    }
+  
+    .mobile-menu.open {
+      right: 0;
+    }
+  
+    .mobile-menu .close-btn {
+      font-size: 24px;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+  
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .mobile-menu li {
+      margin: 15px 0;
+    }
+  
+    .mobile-menu a,
+    .mobile-menu span {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  
+    .mobile-submenu {
+      display: none;
+      padding-left: 15px;
+    }
+  
+    .mobile-submenu li {
+      margin: 10px 0;
+    }
+  
+    .mobile-dropdown.open>.mobile-submenu {
+      display: block;
+    }
+   .mobile-menu{
+    display: block;
+   }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      width: auto;
+      height: 45px;
+
+    }
+}
+
+.pop-plan h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0052cc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pop-plan ul li:not(.no-tick)::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+.pop-plan ul li.no-tick::before {
+  content: none;
+}
+  </style>
+</head>
+<body>
+
+      <!-- Header -->
+    <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#"><img src="img/logo.png" alt="Logo" /></a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+      <a href="#">All Courses</a>
+      <ul class="dropdown-menu">
+        <li><a href="beginner_plan.html">Beginner</a></li>
+        <li><a href="skill_builder_plan.html">Skill Builder</a></li>
+        <li><a href="achiever_plan.html">Career Growth</a></li>
+        <li><a href="pro_plan.html">Job Ready</a></li>
+        
+      </ul>
+    </li>
+            <li><a href="enroll.html">Enroll</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+        </nav>
+    </div>
+     <!-- Mobile Side Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <span onclick="toggleCourses()">All Courses ▼</span>
+                    <ul class="mobile-submenu" id="courseSubMenu">
+                        <li><a href="199plan.html">Beginner</a></li>
+                        <li><a href="499plan.html">Skill Builder</a></li>
+                        <li><a href="999.html">Career Growth</a></li>
+                        <li><a href="2999plan.html">Job Ready</a></li>
+                    </ul>
+                </li>
+                <li><a href="enroll.html">Enroll</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </div>
+
+  </header>
+
+
+  <h1>Enroll Now & Prove You're Serious</h1>
+  <div class="intro">
+    <p>Our Internship is absolutely <strong>FREE</strong>, but we charge for the <strong>exam only</strong> – to filter out only the genuine, serious learners who are ready to grow their career with us.</p>
+    <p>Get certified, gain experience, and stand out from the crowd. Join our mission to build the next generation of AI-powered professionals.</p>
+  </div>
+
+  <div class="pop-plans">
+    <div class="pop-plan">
+      <h2>₹199 Plan</h2>
+      <div class="pop-price">Instant Exam + Certificate</div>
+      <ul>
+        <li>Verified Certification</li>
+        <li>Access to Study Material</li>
+        <li>Helpful for Placements</li>
+        <li>Recognized by Companies</li>
+        <li>Upgrade Anytime to Internship</li>
+      </ul>
+      <a class="pop-btn" href="beginner_form_app.html">Pay ₹199 & Enroll</a>
+    </div>
+
+    <div class="pop-plan">
+      <h2>₹499 Plan</h2>
+      <div class="pop-price">Internship + 3 Certificates</div>
+      <ul>
+        <li>30 Days Internship</li>
+        <li>Workshop Certificate (4 AI Tools)</li>
+        <li>Appreciation Certificate</li>
+        <li><strong>Full Refund</strong> if you fail exam</li>
+      </ul>
+      <a class="pop-btn" href="skill_builder_app.html">Pay ₹499 & Enroll</a>
+    </div>
+
+    <div class="pop-plan">
+      <h2>₹999 Plan</h2>
+      <div class="pop-price">Internship + 5 Certificates</div>
+      <ul>
+        <li>30 Days Internship</li>
+        <li>Workshop Certificate (4 AI Tools)</li>
+        <li>Appreciation Certificate</li>
+        <li>Letter of Recommendation</li>
+        <li>LinkedIn Recommendation from CEO</li>
+        <li>7 Days Training + 23 Days Practical</li>
+        <li><strong>Full Refund</strong> if you fail exam</li>
+      </ul>
+      <a class="pop-btn" href="acheiver_form_app.html">Pay ₹999 & Enroll</a>
+    </div>
+
+    <div class="pop-plan">
+      <h2>₹2999 Plan</h2>
+      <div class="pop-price">Internship + 8 Certificates</div>
+      <ul>
+        <li>30 Days Internship</li>
+        <li>Workshop Certificate (8 AI Tools)</li>
+        <li>Appreciation Certificate with Badge</li>
+        <li>Letter of Recommendation</li>
+        <li>LinkedIn Recommendation from CEO</li>
+        <li>26 Practical Assignments</li>
+        <li>4 Mock Interviews + Weekly Tests</li>
+        <li>4 Live Classes + Portfolio</li>
+        <li>ATS-Friendly Resume</li>
+        <li>Internship ID Card + Offer Letter</li>
+        <li>Official Experience Letter</li>
+        <li><strong>Full Refund</strong> if you fail exam</li>
+      </ul>
+      <a class="pop-btn" href="pro_form_app.html">Pay ₹2999 & Enroll</a>
+    </div>
+  </div>
+
+  <div class="note">
+    🔒 All payments are secured via PhonePe / UPI.<br/>
+    🎓 We are committed to nurturing talent. This exam filter ensures only serious candidates join.<br/>
+    💬 Still have questions? <a href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat with us on WhatsApp</a>
+  </div>
+
+</body>
+</html>
