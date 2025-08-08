@@ -762,6 +762,67 @@ nav li:hover .dropdown-menu {
   display: none;
 }
 
+
+/* verify popup */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-box {
+  position: relative;
+  width: 90%;
+  max-width: 650px; /* increased width */
+  margin: 12% auto;
+}
+
+.modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content p {
+  margin: 0 10px;
+}
+
+.modal-content {
+  display: flex;               /* put elements in a row */
+  justify-content: center;     /* center them horizontally */
+  align-items: center;         /* align vertically */
+  gap: 15px;                   /* space between buttons */
+  flex-wrap: wrap;             /* allow wrap if screen is small */
+}
+
+.modal-content a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #0073e6;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.modal-content a:hover {
+  background: #005bb5;
+  text-decoration: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 /* === MOBILE VIEW: Horizontal scroll row for course cards === */
 @media (max-width: 1447px) {
   html,body{
