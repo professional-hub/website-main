@@ -40,6 +40,7 @@
 
                             </ul>
                         </li>
+                        <li><a href="enroll.html">Enroll</a></li>
                         <li><a href="about.html">About us</a></li>
                         <li><a href="team.html">Our Team</a></li>
                     </ul>
@@ -59,6 +60,7 @@
                             <li><a href="pro_plan.html">Job Ready</a></li>
                         </ul>
                     </li>
+                    <li><a href="enroll.html">Enroll</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="team.html">Our Team</a></li>
                 </ul>
@@ -398,23 +400,19 @@
 
     <!-- Modal Structure -->
     <div id="buyModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <div class="pricing-card">
-        <div class="card-header">
-            <span class="tag">For Ready Candidates</span>
-        </div>
-        <div class="price-row">
-            <span class="price">999</span>
-        </div>
-        <ul>
-        <li><span class="icon">➜</span> Internship Certificate & Experience Letter</li>
-        <li><span class="icon">➜</span> 5 Industry-Relevant Certifications</li>
-        <li><span class="icon">➜</span> Attend Live Training Sessions</li>
-        <li><span class="icon">➜</span> Personal Dashboard Access</li>
-        <li><span class="icon">➜</span> Priority Customer Support</li>
-        </ul>
-        <a href="acheiver_form_app.html" class="cta-btn primary">APPLY NOW</a>
-        </div>
+    <div class="pop-plan">
+      <h2>₹999 Plan</h2>
+      <div class="pop-price">Internship + 5 Certificates</div>
+      <ul>
+        <li>30 Days Internship</li>
+        <li>Workshop Certificate (4 AI Tools)</li>
+        <li>Appreciation Certificate</li>
+        <li>Letter of Recommendation</li>
+        <li>LinkedIn Recommendation from CEO</li>
+        <li>7 Days Training + 23 Days Practical</li>
+        <li><strong>Full Refund</strong>&nbsp;if you fail exam</li>
+      </ul>
+      <a class="pop-btn" href="acheiver_form_app.html">Pay ₹999 & Enroll</a>
     </div>
     </div>
 
@@ -471,6 +469,11 @@
     e.preventDefault(); // Stop page redirect
     verifyModal.style.display = 'block';
     });
+
+    // // Close modal
+    // closeVerify.addEventListener('click', function() {
+    //   verifyModal.style.display = 'none';
+    // });
 
     // Close when clicking outside the modal box
     window.addEventListener('click', function(e) {
