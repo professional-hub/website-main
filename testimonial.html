@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Testimonials – Professional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <style>
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border-color: #3b82f6;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #3b82f6;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+    .swiper-button-next {
+      right: -30px;
+    }
+    .swiper-button-prev {
+      left: -30px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #3b82f6;
+    }
+  </style>
+</head>
+<body class="bg-[#f3f4f6] text-gray-800 font-sans">
+
+  <section class="py-20 px-4 md:px-10 max-w-[90rem] mx-auto relative">
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="feedback" class="w-12 h-12 mx-auto mb-4" />
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Feedback That Fuels Us</h2>
+      <p class="text-gray-500 max-w-xl mx-auto text-base">Real feedback from developers, students, and professionals who’ve used our test platform.</p>
+    </div>
+
+    <!-- Swiper Wrapper with Navigation -->
+    <div class="relative">
+      <!-- Swiper -->
+      <div class="swiper mySwiper px-8">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card border border-gray-200 bg-white rounded-2xl p-6 max-w-md mx-auto">
+              <div class="flex items-center gap-4 mb-4">
+                <img class="w-14 h-14 rounded-full" src="https://i.pravatar.cc/150?img=1" alt="User" />
+                <div>
+                  <h3 class="font-semibold text-lg">Akhil Raj</h3>
+                  <p class="text-sm text-gray-500">Software Engineer, Infosys</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">“Sleek platform with real-time results. The UI is clean and the experience is seamless.”</p>
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card border border-gray-200 bg-white rounded-2xl p-6 max-w-md mx-auto">
+              <div class="flex items-center gap-4 mb-4">
+                <img class="w-14 h-14 rounded-full" src="https://i.pravatar.cc/150?img=5" alt="User" />
+                <div>
+                  <h3 class="font-semibold text-lg">Sneha Verma</h3>
+                  <p class="text-sm text-gray-500">Student, SACET</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">“Simple, modern, and functional. Test scores were displayed immediately after submission.”</p>
+              <div class="text-yellow-400 text-lg">★★★★☆</div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card border border-gray-200 bg-white rounded-2xl p-6 max-w-md mx-auto">
+              <div class="flex items-center gap-4 mb-4">
+                <img class="w-14 h-14 rounded-full" src="https://i.pravatar.cc/150?img=9" alt="User" />
+                <div>
+                  <h3 class="font-semibold text-lg">Ravi Teja</h3>
+                  <p class="text-sm text-gray-500">Freelancer, Web Dev</p>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">“The backend dashboard and PhonePe integration were exactly what I needed.”</p>
+              <div class="text-yellow-400 text-lg">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+
+      <!-- External Arrows -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
+        1280: { slidesPerView: 2.5 },
+      }
+    });
+  </script>
+<center><u><a href="alltestimonials.html" style="color: blue;">Read more</a></u></center>
+</body>
+</html>

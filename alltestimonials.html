@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Testimonials – Extensible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f9fafb] text-gray-800 font-sans">
+
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-2xl font-bold text-gray-900">All Testimonials</h1>
+    </div>
+  </header>
+
+  <section class="py-12 px-6 md:px-16 max-w-[90rem] mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-2">Our Growing Wall of Trust</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto">We’re proud of what our users say. Browse through real stories and feedback.</p>
+    </div>
+
+    <div id="testimonialGrid" class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      <!-- Cards will be injected here -->
+    </div>
+  </section>
+
+  <script>
+    const testimonials = [
+      {
+        name: "Akhil Raj",
+        role: "Software Engineer, Infosys",
+        image: "https://i.pravatar.cc/150?img=1",
+        rating: 5,
+        feedback: "Sleek platform with real-time results. The UI is clean and the experience is seamless."
+      },
+      {
+        name: "Sneha Verma",
+        role: "Student, SACET",
+        image: "https://i.pravatar.cc/150?img=5",
+        rating: 4,
+        feedback: "Simple, modern, and functional. Test scores were displayed immediately after submission."
+      },
+      {
+        name: "Ravi Teja",
+        role: "Freelancer, Web Dev",
+        image: "https://i.pravatar.cc/150?img=9",
+        rating: 5,
+        feedback: "The backend dashboard and PhonePe integration were exactly what I needed."
+      },
+      {
+        name: "Nikhil Sharma",
+        role: "Data Scientist",
+        image: "https://i.pravatar.cc/150?img=12",
+        rating: 4,
+        feedback: "Accurate test evaluation, and the results helped me prepare for job interviews."
+      },
+      {
+        name: "Pavani K",
+        role: "B.Tech Student",
+        image: "https://i.pravatar.cc/150?img=22",
+        rating: 5,
+        feedback: "The practice tests are so realistic! I loved the instant feedback and result tracking."
+      },
+
+  {
+    name: "Meena Kumari",
+    role: "Project Manager",
+    image: "https://i.pravatar.cc/150?img=38",
+    rating: 4,
+    feedback: "Impressive layout and easy navigation — highly recommend it!"
+  },
+  {
+    name: "Rajeev Nair",
+    role: "Marketing Executive",
+    image: "https://i.pravatar.cc/150?img=5",
+    rating: 5,
+    feedback: "Perfect for students looking to improve their coding and aptitude skills."
+  },
+  {
+    name: "Ananya Reddy",
+    role: "UI/UX Designer",
+    image: "https://i.pravatar.cc/150?img=21",
+    rating: 5,
+    feedback: "The dashboard and analysis tools are very professional."
+  },
+  {
+    name: "Manoj Das",
+    role: "UI/UX Designer",
+    image: "https://i.pravatar.cc/150?img=23",
+    rating: 4,
+    feedback: "The test engine is super-fast and the payment system is smooth."
+  },
+  {
+    name: "Gopal Das",
+    role: "B.Tech Student",
+    image: "https://i.pravatar.cc/150?img=56",
+    rating: 5,
+    feedback: "Their platform helped me crack my internship test with ease."
+  },
+  {
+    name: "Anil Kumar",
+    role: "Marketing Executive",
+    image: "https://i.pravatar.cc/150?img=50",
+    rating: 5,
+    feedback: "The dashboard and analysis tools are very professional."
+  },
+  {
+    name: "Deepak Varma",
+    role: "Project Manager",
+    image: "https://i.pravatar.cc/150?img=14",
+    rating: 5,
+    feedback: "The test engine is super-fast and the payment system is smooth."
+  },
+  {
+    name: "Tarun Babu",
+    role: "QA Engineer",
+    image: "https://i.pravatar.cc/150?img=12",
+    rating: 4,
+    feedback: "Perfect for students looking to improve their coding and aptitude skills."
+  },
+  {
+    name: "Tarun Babu",
+    role: "Project Manager",
+    image: "https://i.pravatar.cc/150?img=57",
+    rating: 5,
+    feedback: "The test simulations are so close to real campus drives!"
+  },
+  {
+    name: "Deepak Varma",
+    role: "Frontend Developer",
+    image: "https://i.pravatar.cc/150?img=60",
+    rating: 4,
+    feedback: "It’s user-friendly, and the instant result report made a big difference."
+  },
+  {
+    name: "Meena Kumari",
+    role: "Marketing Executive",
+    image: "https://i.pravatar.cc/150?img=6",
+    rating: 5,
+    feedback: "Impressive layout and easy navigation — highly recommend it!"
+  },
+  {
+    name: "Yash Mehta",
+    role: "HR Associate",
+    image: "https://i.pravatar.cc/150?img=5",
+    rating: 5,
+    feedback: "I could practice anytime and the performance feedback was spot on."
+  },
+  {
+    name: "Anil Kumar",
+    role: "HR Associate",
+    image: "https://i.pravatar.cc/150?img=28",
+    rating: 5,
+    feedback: "Absolutely loved the test experience! Clean interface and accurate results."
+  },
+  {
+    name: "Surya Prakash",
+    role: "Backend Developer",
+    image: "https://i.pravatar.cc/150?img=14",
+    rating: 5,
+    feedback: "Our college used it for internal assessments — flawless results!"
+  },
+  {
+    name: "Pooja Choudhary",
+    role: "Software Engineer, TCS",
+    image: "https://i.pravatar.cc/150?img=17",
+    rating: 4,
+    feedback: "It’s user-friendly, and the instant result report made a big difference."
+  },
+  {
+    name: "Swetha Pillai",
+    role: "Software Engineer, TCS",
+    image: "https://i.pravatar.cc/150?img=47",
+    rating: 5,
+    feedback: "The test engine is super-fast and the payment system is smooth."
+  },
+  {
+    name: "Kavitha Iyer",
+    role: "Frontend Developer",
+    image: "https://i.pravatar.cc/150?img=25",
+    rating: 5,
+    feedback: "Their platform helped me crack my internship test with ease."
+  },
+  {
+    name: "Harsha Vardhan",
+    role: "Backend Developer",
+    image: "https://i.pravatar.cc/150?img=18",
+    rating: 5,
+    feedback: "The dashboard and analysis tools are very professional."
+  },
+  {
+    name: "Aishwarya Patel",
+    role: "UI/UX Designer",
+    image: "https://i.pravatar.cc/150?img=59",
+    rating: 4,
+    feedback: "The test engine is super-fast and the payment system is smooth."
+  },
+  {
+    name: "Divya Sharma",
+    role: "UI/UX Designer",
+    image: "https://i.pravatar.cc/150?img=34",
+    rating: 5,
+    feedback: "The test simulations are so close to real campus drives!"
+  }
+];
+
+      // Add more objects to grow list
+   
+
+    const container = document.getElementById("testimonialGrid");
+
+    testimonials.forEach(user => {
+      const stars = "★".repeat(user.rating) + "☆".repeat(5 - user.rating);
+      const card = `
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="${user.image}" alt="${user.name}" class="w-14 h-14 rounded-full shadow" />
+            <div>
+              <h3 class="font-semibold text-lg">${user.name}</h3>
+              <p class="text-sm text-gray-500">${user.role}</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">"${user.feedback}"</p>
+          <div class="text-yellow-400 text-lg">${stars}</div>
+        </div>`;
+      container.innerHTML += card;
+    });
+  </script>
+
+</body>
+</html>
