@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Career</title>
+    <link rel="stylesheet" href="css/career.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("open");
+        }
+
+    function toggleCourses() {
+            const dropdown = document.querySelector(".mobile-dropdown");
+            dropdown.classList.toggle("open");
+        }
+    </script>
+</head>
+<body>
+     <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="Logo" /></a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">All Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="beginner_plan.html">Beginner</a></li>
+                            <li><a href="skill_builder_plan.html">Skill Builder</a></li>
+                            <li><a href="achiever_plan.html">Career Growth</a></li>
+                            <li><a href="pro_plan.html">Job Ready</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="enroll.html">Enroll</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Mobile Side Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <span onclick="toggleCourses()">All Courses ▼</span>
+                    <ul class="mobile-submenu" id="courseSubMenu">
+                        <li><a href="beginner_plan.html">Beginner</a></li>
+                        <li><a href="skill_builder_plan.html">Skill Builder</a></li>
+                        <li><a href="achiever_plan.html">Career Growth</a></li>
+                        <li><a href="pro_plan.html">Job Ready</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="enroll.html">Enroll</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+        <div class="left-content">
+            <h2>QualityCareer</h2><br><h3><span class="highlight">Empowering Careers, Transforming Futures</span></h3>
+            <h3>Work at the heart of change<br></h3>
+             <p>This is a place to grow, learn and connect.</p>
+             <p>Everything that makes you who you are is welcome here.</p>
+        </div>
+        <div class="right-image">
+            <img src="img/cont_banner_logo.png" alt="logo Image">
+        </div>
+        </div>
+    </section>
+
+    <!-- About Careers -->
+    <section class="about-careers">
+        <h2>Why Join QualityCareer?</h2>
+        <p>At QualityCareer, we are committed to empowering individuals through skills, opportunities, and mentorship. 
+           Our team is passionate about shaping futures and fostering a collaborative workplace where everyone thrives.</p>
+    </section>
+
+        <section class="placement-section">
+            <h2 class="placement-title">Get Placements From Top Companies</h2>
+            <div class="underline"></div>
+        </section>
+
+        <section class="overflow-hidden bg-white-100 py-4">
+            <div class="marquee space-x-8">
+                <img src="img/companies.png" alt="Company Logos" class="h-12">
+                <img src="img/companies.png" alt="Company Logos" class="h-12">
+                <img src="img/companies.png" alt="Company Logos" class="h-12">
+            </div>
+        </section>
+
+    <!-- Perks & Benefits -->
+<section class="benefits">
+    <h2>Perks & Benefits</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <h3>📈 Career Growth</h3>
+            <p>Training programs and mentorship to help you achieve your professional goals.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🕒 Work-Life Balance</h3>
+            <p>Flexible hours and hybrid work options for a healthier lifestyle.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🤝 Inclusive Culture</h3>
+            <p>A supportive and diverse workplace where your voice matters.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>💼 Job Security</h3>
+            <p>We provide stable career paths and long-term employment opportunities.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Instant Exam -->
+    <section class="open-positions">
+        <h2>Instant Examination <span style="color: #F37820;">With Certificate</span></h2>
+        
+        <div class="job-list">
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Hr Intern &nbsp;&nbsp;&nbsp;</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Instant Exam</span>
+                    <!-- <span class="tag">On-site</span> -->
+                </div>
+                <div class="internship-details">
+                    <p>1 Day</p>
+                    <p>Get Certified By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 199</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="beginner_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Digital Marketing</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Instant Exam</span>
+                    <!-- <span class="tag">On-site</span> -->
+                </div>
+                <div class="internship-details">
+                    <p>1 Day</p>
+                    <p>Get Certified By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 199</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="beginner_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Sales Executive</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Instant Exam</span>
+                    <!-- <span class="tag">On-site</span> -->
+                </div>
+                <div class="internship-details">
+                    <p>1 Day</p>
+                    <p>Get Certified By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 199</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="beginner_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Business Development</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Instant Exam</span>
+                    <!-- <span class="tag">On-site</span> -->
+                </div>
+                <div class="internship-details">
+                    <p>1 Day</p>
+                    <p>Get Certified By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 199</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="beginner_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Finance Analyst</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Instant Exam</span>
+                    <!-- <span class="tag">On-site</span> -->
+                </div>
+                <div class="internship-details">
+                    <p>1 Day</p>
+                    <p>Get Certified By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 199</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="beginner_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 499 -->
+    <section class="open-positions">
+        <h2>Internship Oppertunities For <span style="color: #F37820;">Hands-on Skill Builder</span></h2>
+        
+        <div class="job-list">
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Human Recource &nbsp;&nbsp;</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Get Internship Opportunity By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 499</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="skill_builder_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Graphic Designer</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Get Internship Opportunity By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 499</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="skill_builder_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Sales Fundamentals</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Get Internship Opportunity By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 499</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="skill_builder_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Business Development</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Get Internship Opportunity By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 499</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="skill_builder_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Digital Marketing</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Get Internship Opportunity By Passing Exam.</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 499</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="skill_builder_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 999 -->
+    <section class="open-positions">
+        <h2>Internship Oppertunities For <span style="color: #F37820;">Career-Driven Achiever</span></h2>
+        
+        <div class="job-list">
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Human Recource &nbsp;&nbsp;&nbsp;</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Hands-On Training +<br>Placement Support....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="achiever_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Graphic Designer</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Hands-On Training +<br>Placement Support....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="achiever_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Sales Fundamentals</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Hands-On Training +<br>Placement Support....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="achiever_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Business Development</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Hands-On Training +<br>Placement Support....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="achiever_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Digital Marketing</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Hands-On Training +<br>Placement Support....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="achiever_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 2999 -->
+    <section class="open-positions">
+        <h2>Internship Oppertunities For <span style="color: #F37820;">Future-Ready Professional</span></h2>
+        
+        <div class="job-list">
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Back-end Developer &nbsp;</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Ideal for Pro Intern’s to Build Real-World Skills.</p>
+                    <p>5 Government-Verified Digital Certificates.....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 2999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="pro_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Web Development</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Ideal for Pro Intern’s to Build Real-World Skills.</p>
+                    <p>5 Government-Verified Digital Certificates.....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 2999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="pro_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Human Resource</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Ideal for Pro Intern’s to Build Real-World Skills.</p>
+                    <p>5 Government-Verified Digital Certificates.....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 2999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="pro_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Business Development</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Ideal for Pro Intern’s to Build Real-World Skills.</p>
+                    <p>5 Government-Verified Digital Certificates.....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 2999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="pro_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+
+            <div class="internship-card">
+                <div class="card-header">
+                    <span class="card-date">11 Aug 2025</span>
+                    <div class="top-right-circle"></div>
+                </div>
+                <div class="company-info">
+                    <h2>Graphic Designer</h2>
+                    <img src="img/comp_logo.png" alt="comp_Logo" class="company-logo">
+                </div>
+                <div class="internship-tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">On-site</span>
+                </div>
+                <div class="internship-details">
+                    <p>30 Days</p>
+                    <p>Ideal for Pro Intern’s to Build Real-World Skills.</p>
+                    <p>5 Government-Verified Digital Certificates.....</p>
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <div class="salary">₹ 2999</div>
+                        <div class="location">Chirala, Andhra Pradesh 523155</div>
+                    </div>
+                    <a href="pro_plan.html" class="details-button">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="cta">
+        <h2>Ready to Build Your Future?</h2>
+        <p>Join QualityCareer and take the next big step in your career journey.</p>
+        <a href="#" class="apply-btn">Explore Quality Career</a>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-column footer-logo-section">
+            <img src="img/cont_banner_logo.png" alt="Quality Career Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Branch Timings</h3>
+            <ul>
+                <li class="timing-item">
+                    <span>Monday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Tuesday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Wednesday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Thursday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Friday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Saturday - 9:30 AM to 9:00 PM</span>
+                </li>
+                <li class="timing-item">
+                    <span>Sunday - 9:30 AM to 9:00 PM</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="team.html">Management Team</a></li>
+                <li><a href="https://qualitynetworkindia.quora.com/">Blog</a></li>
+                <li><a href="#" id="verifyLink">Verify Your Certificates</a></li>
+            </ul>
+            <div class="social-media">
+                <h3>Our Social Media Pages</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/qualitydigitalservices/posts/?feedView=all"><img src="img/icons8-linkedin-50.png" alt="linkedin" class="social-icon"></a>
+                    <a href="https://www.instagram.com/qualitydigitalservices?igsh=MTQwdHcxeWJrcmNvYw=="><img src="img/icons8-insta-50.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://wa.me/917382752900"><img src="img/icons8-whatsapp-50.png" alt="whatsapp" class="social-icon"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61576551030803&mibextid=rS40aB7S9Ucbxw6v"><img src="img/icons8-facebook-50.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="img/icons8-youtube-50.png" alt="YouTube" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="footer-column">
+            <h3>Our Main Head Office</h3>
+            <div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.5576565863803!2d80.35359127568398!3d15.82726148481763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a450034308cd5%3A0x6833a282790a1860!2sJanjanam%20complex!5e0!3m2!1sen!2sin!4v1753715002315!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
