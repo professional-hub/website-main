@@ -324,8 +324,8 @@ nav li:hover .dropdown-menu {
         }
 
         .internship-details {
-            font-size: 0.95em;
-            color: #666666;
+            font-size: 10px;
+            color: #000000;
             margin-bottom: 20px;
             line-height: 1.5;
         }
@@ -378,14 +378,6 @@ nav li:hover .dropdown-menu {
     font-size: 30px;
     margin-bottom: 10px;
     color: #000000;
-}
-
-.open p {
-  padding: 10px;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0b1a3d;
-  font-weight: 600;
 }
 
 .job-list {
