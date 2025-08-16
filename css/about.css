@@ -285,7 +285,7 @@ nav li:hover .dropdown-menu {
     }
     .footer-section {
             background-color: #0d1e3d; /* Dark blue background */
-            padding: 50px 20px;
+            padding: 30px 20px;
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
@@ -740,3 +740,4 @@ nav li:hover .dropdown-menu {
     gap: 10px;
   }
 }
+
