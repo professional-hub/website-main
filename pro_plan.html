@@ -385,7 +385,7 @@ function toggleCourses() {
                 <li><a href="about.html">About us</a></li>
                 <li><a href="team.html">Management Team</a></li>
                 <li><a href="https://qualitynetworkindia.quora.com/">Blog</a></li>
-                <li><a href="#" id="verifyLink">Verify Your Certificates</a></li>
+                <li><a href="https://verify.qualitycareer.in/">Verify Your Certificates</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
                 <li><a href="partner.html">Partner With Us</a></li>
             </ul>
@@ -435,18 +435,6 @@ function toggleCourses() {
 </div>
 
 
-<!-- Popup Modal -->
-<div class="modal-overlay" id="verifyModal">
-  <div class="modal-box">
-    <div class="modal-content">
-      <h2>Certificate Verification</h2>
-      <p><a href="https://verify.qualitycareer.in/" target="_blank">Verify Your Internship Certificate</a></p>
-      <p><a href="https://instantexamcertificateverification.qualitycareer.in" target="_blank">Verify Your Instant Exam Certificate</a></p>
-    </div>
-  </div>
-</div>
-
-
 
 <!-- Script -->
 <script>
@@ -476,29 +464,10 @@ function toggleCourses() {
     });
   });
 
-
-
-
-  // Get elements
-    const verifyLink = document.getElementById('verifyLink');
-    const verifyModal = document.getElementById('verifyModal');
-    const closeVerify = document.getElementById('closeVerify');
-
-    // Show modal when footer link clicked
-    verifyLink.addEventListener('click', function(e) {
-    e.preventDefault(); // Stop page redirect
-    verifyModal.style.display = 'block';
-    });
-
-    // Close when clicking outside the modal box
-    window.addEventListener('click', function(e) {
-    if (e.target === verifyModal) {
-        verifyModal.style.display = 'none';
-    }
-    });
 </script>
 
 </body></html>
+
 
 
 
