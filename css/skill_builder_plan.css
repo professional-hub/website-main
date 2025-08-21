@@ -687,7 +687,7 @@ nav li:hover .dropdown-menu {
         }
 
         .footer-logo {
-            width: 270px; /* Adjust as per image */
+            width: 340px; /* Adjust as per image */
             height: auto;
         }
 
@@ -1180,5 +1180,6 @@ nav ul {
 }
 
 }
+
 
 
