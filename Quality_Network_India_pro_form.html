@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="img/head_logo.png">
+  <title>Quality Network India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 600px;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo img {
+      max-height: 100px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #252b46;
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p.intro {
+      text-align: center;
+      color: #444;
+      font-size: 0.94em;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .progressbar {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .progressbar::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      right: 8%;
+      height: 3px;
+      background: #d1d5db;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .progress-step {
+      width: 36px;
+      height: 36px;
+      background: #d1d5db;
+      z-index: 2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .progress-step.active {
+      background: #1e40af;
+    }
+
+    .progress-step::after {
+      position: absolute;
+      top: 46px;
+      font-size: 0.65em;
+      color: #252b46;
+      width: 120px;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 1.4;
+      padding-top: 4px;
+    }
+
+    .progress-step:nth-child(1)::after { content: "1. Basic Details"; }
+    .progress-step:nth-child(2)::after { content: "2. Professional Details"; }
+    .progress-step:nth-child(3)::after { content: "3. Final & Submit"; }
+
+    label {
+      margin-top: 1rem;
+      font-weight: 500;
+      color: #333;
+      display: block;
+    }
+
+    input, select {
+      margin-top: 0.4rem;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #c4c4c4;
+      border-radius: 6px;
+      width: 100%;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    input:focus, select:focus {
+      border-color: #1e40af;
+    }
+
+    .form-step {
+      display: none;
+      flex-direction: column;
+    }
+
+    .form-step-active {
+      display: flex;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.8rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      background: #1e40af;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+      min-width: 120px;
+    }
+
+    .btn:disabled {
+      background: #a5b4fc;
+      cursor: not-allowed;
+    }
+
+    #thankyouModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #thankyouModal .box {
+      background: white;
+      max-width: 500px;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    #thankyouModal button {
+      margin-top: 2rem;
+      padding: 10px 24px;
+      background: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .progress-step::after {
+        font-size: 0.55em;
+        width: 90px;
+      }
+
+      .btns {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"><img src="img/form_logo.png" alt="Company Logo" /></div>
+    <h1>Internship Application</h1>
+    <p class="intro">Please fill the form accurately. Shortlisted candidates will receive instructions via WhatsApp.</p>
+    <div class="progressbar">
+      <div class="progress-step active">1</div>
+      <div class="progress-step">2</div>
+      <div class="progress-step">3</div>
+    </div>
+
+    <form id="form">
+      <!-- STEP 1 -->
+      <div class="form-step form-step-active" data-step="0">
+        <label>Email</label><input type="email" name="email" required>
+        <label>Timestamp</label><input type="text" name="timestamp" id="timestamp" readonly>
+        <label>Full Name</label><input type="text" name="fullName" required>
+        <label>Mobile Number</label><input type="tel" name="mobile" pattern="\d{10}" required>
+        <label>WhatsApp Number</label><input type="tel" name="whatsapp" pattern="\d{10}" required>
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select Gender</option><option>Male</option><option>Female</option>
+        </select>
+        <div class="btns"><button type="button" class="btn" id="next0" disabled>Next</button></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step" data-step="1">
+        <label class="required">Position Applying For</label>
+        <select name="position" required>
+          <option value="">Select Role</option>
+          <option>Human Resource</option>
+          <option>Digital Marketing</option>
+          <option>Graphic Designer</option>
+          <option>Front-End Developer</option>
+          <option>Back-end Developer</option>
+          <option>Web Development</option>
+          <option>Business Development</option>
+          <option>Sales Fundamentals</option>
+
+        </select>
+        <label class="required">Device Access</label>
+        <select name="device" required>
+          <option value="">Select Option</option>
+          <option>Yes, Laptop & Smartphone</option>
+          <option>Only Smartphone</option>
+          <option>Only Laptop</option>
+          <option>None</option>
+        </select>
+        <label class="required">Current Status</label>
+        <select name="status" required>
+          <option value="">Select Status</option>
+          <option>Student</option>
+          <option>Graduate</option>
+          <option>Job Seeker</option>
+          <option>Other</option>
+        </select>
+        <label class="required">Preferred Language</label>
+        <select name="language" required>
+          <option value="">Select Language</option>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>Telugu</option>
+          <option>Kannada</option>
+          <option>Tamil</option>
+          <option>Other</option>
+        </select>
+        
+       <label class="required">Upload Resume</label>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required> 
+        <div class="btns">
+          <button type="button" class="btn" id="prev1">Previous</button>
+          <button type="button" class="btn" id="next1" disabled>Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="form-step" data-step="2">
+        <h2 style="color:#252b46;">Review & Submit</h2>
+        <p>Click <strong>Submit</strong> to finish your application.</p>
+        <div class="btns">
+          <button type="button" class="btn" id="prev2">Previous</button>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- THANK YOU MODAL (inside your HTML) -->
+<div id="thankyouModal">
+  <div class="box">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#22c55e" viewBox="0 0 24 24">
+      <path d="M20.285 6.708l-11.03 11.03-5.657-5.657 1.414-1.414 4.243 4.243 9.616-9.616z"/>
+    </svg>
+    <h2 style="color:#22c55e;">Application Submitted!</h2>
+    <p>Your details were successfully received. Our HR team will contact you via WhatsApp within 24 hours.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  const steps = document.querySelectorAll(".form-step");
+  const progress = document.querySelectorAll(".progress-step");
+  const form = document.getElementById("form");
+  const popup = document.getElementById("thankyouModal");
+  let step = 0;
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzG_YIXLRU1NIOFFXz5NcMxEGf9cAMyrpFL6HN7aUrsdGrNpoiJJdrrsU0jHV6OD_nQJQ/exec";
+
+  const getISTTimestamp = () => {
+    const now = new Date();
+    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+    const ist = new Date(utc + 5.5 * 60 * 60 * 1000);
+    const yyyy = ist.getFullYear();
+    const mm = String(ist.getMonth() + 1).padStart(2, "0");
+    const dd = String(ist.getDate()).padStart(2, "0");
+    const hh = String(ist.getHours()).padStart(2, "0");
+    const min = String(ist.getMinutes()).padStart(2, "0");
+    const ss = String(ist.getSeconds()).padStart(2, "0");
+    const timestamp = `${yyyy}-${mm}-${dd} ${hh}:${min}:${ss}`;
+    document.getElementById("timestamp").value = timestamp;
+    return timestamp;
+  };
+
+  setInterval(getISTTimestamp, 1000);
+  getISTTimestamp();
+
+  const showStep = i => {
+    steps.forEach((s, idx) => s.classList.toggle("form-step-active", idx === i));
+    progress.forEach((p, idx) => p.classList.toggle("active", idx === i));
+    step = i;
+  };
+
+  const enableValidation = (idx, btnId) => {
+    const inputs = steps[idx].querySelectorAll("input[required], select[required]");
+    const btn = document.getElementById(btnId);
+    const validate = () => {
+      btn.disabled = [...inputs].some(el =>
+        el.type === "file" ? !el.files.length : !el.checkValidity()
+      );
+    };
+    inputs.forEach(el => el.addEventListener("input", validate));
+    inputs.forEach(el => el.addEventListener("change", validate));
+    validate();
+  };
+
+  enableValidation(0, "next0");
+  enableValidation(1, "next1");
+  document.getElementById("next0").onclick = () => showStep(1);
+  document.getElementById("prev1").onclick = () => showStep(0);
+  document.getElementById("next1").onclick = () => showStep(2);
+  document.getElementById("prev2").onclick = () => showStep(1);
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const file = fd.get("resume");
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = async function () {
+      popup.style.display = "flex";
+
+      const base64 = reader.result.split(",")[1];
+      const formData = new FormData();
+      formData.append("timestamp", document.getElementById("timestamp").value);
+      formData.append("email", fd.get("email"));
+      formData.append("fullName", fd.get("fullName"));
+      formData.append("mobile", fd.get("mobile"));
+      formData.append("whatsapp", fd.get("whatsapp"));
+      formData.append("gender", fd.get("gender"));
+      formData.append("position", fd.get("position"));
+      formData.append("device", fd.get("device"));
+      formData.append("status", fd.get("status"));
+      formData.append("language", fd.get("language"));
+      formData.append("workMode", fd.get("workMode"));
+      formData.append("resumeBase64", base64);
+      formData.append("filename", file.name);
+      formData.append("contentType", file.type);
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          body: formData
+        });
+        const result = await response.json();
+        if (result.success) {
+          form.reset();
+          getISTTimestamp();
+          showStep(0);
+        } else {
+          alert("Submission failed: " + (result.error || "Unknown error"));
+        }
+      } catch (err) {
+        alert("Error submitting form: " + err.message);
+      }
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // 👇 Add this part to handle popup close
+  window.closePopup = function () {
+    popup.style.display = "none";
+    form.reset();
+    getISTTimestamp();
+    showStep(0);
+  };
+})();
+</script>
+</body>
+</html>
